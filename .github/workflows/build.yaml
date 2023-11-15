@@ -1,0 +1,38 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-win:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wirekang/setup-ninja@v1
+        with:
+          platform: win
+          tag: v1.11.1
+      - run: scripts/build.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: build/cpcn.exe
+  build-lin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wirekang/setup-ninja@v1
+        with:
+          platform: linux
+          tag: v1.11.1
+      - run: scripts/build.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: build/cpcn
