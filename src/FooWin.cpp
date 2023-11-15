@@ -1,4 +1,4 @@
-#ifdef WIN32
+#ifdef P_WIN
 
 #include "FooWin.h"
 #include "windows.h"
