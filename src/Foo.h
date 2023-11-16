@@ -1,5 +1,6 @@
 #ifndef CPCN_FOO_H
 #define CPCN_FOO_H
+#include <memory>
 
 
 class Foo {
@@ -8,7 +9,7 @@ public:
 
     virtual void print() = 0;
 
-    static Foo *NewInstance();
+    static std::unique_ptr<Foo> Create();
 };
 
 
