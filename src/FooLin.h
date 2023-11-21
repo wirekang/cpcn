@@ -1,16 +1,13 @@
-#ifdef P_LIN
 #ifndef CPCN_FOOLIN_H
 #define CPCN_FOOLIN_H
-#include "Foo.h"
+#ifdef P_LIN
 
-
-class FooLin: public Foo {
+class Foo {
 public:
-    ~FooLin() override;
-
-    void print() override;
+    ~Foo();
+    void print();
 };
 
 
-#endif //CPCN_FOOLIN_H
 #endif
+#endif //CPCN_FOOLIN_H

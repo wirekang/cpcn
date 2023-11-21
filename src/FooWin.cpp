@@ -2,13 +2,14 @@
 
 #include "FooWin.h"
 #include "windows.h"
+#include "iostream"
 
-void FooWin::print() {
+void Foo::print() {
     std::cout << "win" << std::endl;
-    MessageBox(NULL, "Hello, Windows!", "CPCN", MB_OK);
+    MessageBox(nullptr, "Hello, Windows!", "CPCN", MB_OK);
 }
 
-FooWin::~FooWin() {
+Foo::~Foo() {
     std::cout << "des win" << std::endl;
 }
 

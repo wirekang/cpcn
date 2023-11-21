@@ -1,7 +1,8 @@
 #include "Foo.h"
+#include <memory>
 
 int main() {
-    auto foo = Foo::Create();
+    std::unique_ptr<Foo> foo(new Foo());
     foo->print();
     return 0;
 }

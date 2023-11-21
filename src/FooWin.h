@@ -1,18 +1,13 @@
-#ifdef P_WIN
 #ifndef CPCN_FOOWIN_H
 #define CPCN_FOOWIN_H
+#ifdef P_WIN
 
-
-#include <iostream>
-#include "Foo.h"
-
-class FooWin : public Foo {
+class Foo {
 public:
-    ~FooWin() override;
-
-    void print() override;
+    ~Foo();
+    void print();
 };
 
 
-#endif //CPCN_FOOWIN_H
 #endif
+#endif //CPCN_FOOWIN_H

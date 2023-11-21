@@ -8,7 +8,6 @@ add_executable(cpcn
         src/Foo.h
         src/FooWin.cpp
         src/FooWin.h
-        src/Foo.cpp
         src/FooLin.cpp
         src/FooLin.h
 )

@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <X11/Xlib.h>
 
-void FooLin::print() {
+void Foo::print() {
     std::cout << "lin" << std::endl;
     Display *display;
     Window window;
@@ -24,7 +24,7 @@ void FooLin::print() {
     XCloseDisplay(display);
 }
 
-FooLin::~FooLin() {
+Foo::~Foo() {
     std::cout << "des lin" << std::endl;
 }
 

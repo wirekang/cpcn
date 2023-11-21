@@ -1,16 +1,12 @@
 #ifndef CPCN_FOO_H
 #define CPCN_FOO_H
-#include <memory>
 
+#ifdef P_WIN
+#include "FooWin.h"
+#endif
 
-class Foo {
-public:
-    virtual ~Foo() = default;
-
-    virtual void print() = 0;
-
-    static std::unique_ptr<Foo> Create();
-};
-
+#ifdef P_LIN
+#include "FooLin.h"
+#endif
 
 #endif //CPCN_FOO_H
